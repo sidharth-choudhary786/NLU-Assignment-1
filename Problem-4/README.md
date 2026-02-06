@@ -36,9 +36,7 @@ Despite identical accuracy scores, the models differ in their learning behavior 
 ## Limitations
 The dataset is relatively clean and does not include ambiguous or overlapping documents. Real-world news articles may contain mixed topics or informal language, which could reduce performance. Additionally, the study is limited to English news text.
 
-## How to Run
-1. Install required libraries:
-   - pandas
-   - scikit-learn
-2. Run the classification script:
-''' python sports_politics_classification.py'''
+Note:
+The code provided in this repository is for reference and documentation
+purposes only. The primary deliverable for this problem is the PDF report,
+which contains the complete experimental setup, results, and analysis.
