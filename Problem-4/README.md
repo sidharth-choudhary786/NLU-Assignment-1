@@ -1,16 +1,30 @@
 # Problem-4: Sports vs Politics Text Classification
 
 ## Overview
-This project addresses a binary text classification problem where news articles are classified into two categories: Sports and Politics. The objective is to compare different machine learning techniques and feature representations for document classification.
+This repository documents the work carried out for Problem-4 of Assignment-1
+in the Natural Language Understanding course. The task focuses on binary text
+classification, where news articles are categorized as either Sports or Politics.
+
+The objective of this problem is not only to obtain high classification accuracy,
+but also to understand how feature representations and classical machine learning
+models behave on structured news text.
 
 ## Dataset
-The BBC News dataset was used for this task. The dataset was obtained in CSV format and contains news articles from multiple categories. For this problem, only the sports and politics categories were selected to form a binary classification dataset.
+The experiments were conducted using the BBC News dataset, which consists of
+professionally written news articles across multiple categories. For this task,
+only the Sports and Politics categories were selected to construct a binary
+classification problem.
 
-- Sports articles: 511
-- Politics articles: 417
-- Total documents used: 928
+Dataset statistics:
+- Sports articles: 511  
+- Politics articles: 417  
+- Total documents used: 928  
 
-An 80% training and 20% testing split was applied with stratified sampling.
+An 80% training and 20% testing split was applied using stratified sampling to
+preserve class proportions.
+
+The dataset exhibits strong lexical separation between the two categories,
+which simplifies classification but may lead to optimistic performance estimates.
 
 ## Feature Representation
 The following feature extraction techniques were explored:
@@ -18,25 +32,35 @@ The following feature extraction techniques were explored:
 - TF-IDF
 - TF-IDF with n-grams (unigrams and bigrams)
 
-Stopword removal and minimum document frequency thresholds were applied to reduce noise.
+Standard preprocessing steps such as lowercasing, stopword removal, and minimum
+document frequency filtering were applied to reduce noise and sparsity.
 
 ## Machine Learning Models
-Three supervised learning models were trained and evaluated:
+The following supervised learning models were evaluated:
 - Multinomial Naive Bayes
 - Logistic Regression
 - Linear Support Vector Machine (SVM)
 
-All models were trained using TF-IDF features for fair comparison.
+To ensure a fair comparison, all models were trained and evaluated using the same
+TF-IDF feature representation and train-test split.
 
 ## Results
-All three models achieved very high accuracy on the test set. This is attributed to the clean and well-separated nature of the dataset, where sports and politics articles exhibit distinct vocabularies.
+All three models achieved perfect classification accuracy on the test set. This
+result is primarily attributed to the clean and well-structured nature of the
+dataset, where Sports and Politics articles use largely distinct vocabularies.
 
-Despite identical accuracy scores, the models differ in their learning behavior and assumptions.
+Although the numerical performance is identical, the models differ in their
+assumptions and learning mechanisms. These differences are discussed in detail
+in the accompanying report.
 
 ## Limitations
-The dataset is relatively clean and does not include ambiguous or overlapping documents. Real-world news articles may contain mixed topics or informal language, which could reduce performance. Additionally, the study is limited to English news text.
+The dataset contains professionally edited articles and does not include
+ambiguous or mixed-topic documents. As a result, the classification task is
+simpler than many real-world scenarios. The study is also limited to English
+news text and a binary classification setting.
 
-Note:
-The code provided in this repository is for reference and documentation
-purposes only. The primary deliverable for this problem is the PDF report,
-which contains the complete experimental setup, results, and analysis.
+## Note
+The code and data included in this repository are provided for reference and
+documentation purposes only. The primary deliverable for this problem is the
+PDF report, which contains the complete experimental setup, analysis, and
+discussion as required by the assignment.
